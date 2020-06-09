@@ -5,7 +5,7 @@ import {HomeModule} from './home/home.module';
 import{SharedModule} from './shared/shared.module';
 
 
-const routes: Routes = [
+export const APP_ROUTES: Routes= [
   {path:'home',
   loadChildren:'./home/home.module#HomeModule'},
   
@@ -16,8 +16,3 @@ loadChildren:'./shared/shared.module#SharedModule'},
 loadChildren:'./shared/shared.module#SharedModule' },
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
