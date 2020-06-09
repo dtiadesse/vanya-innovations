@@ -11,14 +11,14 @@ import { FooterService } from './providers/footer.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
+
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+   
     
   ],
   imports: [

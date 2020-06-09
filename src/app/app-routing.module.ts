@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { HomeComponent } from './home/home.component';
+import {HomeModule} from './home/home.module';
+import{SharedModule} from './shared/shared.module';
 
 
 const routes: Routes = [
   {path:'home',
-  component:HomeComponent},
+  loadChildren:'./home/home.module#HomeModule'},
   
 {path:'header',
-loadChildren:'./shared/header/'},
-{ path:'footer',component: FooterComponent },
+loadChildren:'./shared/shared.module#SharedModule'},
+
+{ path:'footer',
+loadChildren:'./shared/shared.module#SharedModule' },
 ];
 
 @NgModule({
